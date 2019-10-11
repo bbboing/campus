@@ -10,17 +10,6 @@
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
-  "tabBar": {
-    "color": "blue",
-    "selectedColor": "#000000",
-    "backgroundColor": "white",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页"
-    }, {
-      "pagePath": "pages/logs/logs",
-      "text": "日志"
-    }]
-    },
-    "usingComponents": {}
+  "usingComponents": {
+  }
 }
