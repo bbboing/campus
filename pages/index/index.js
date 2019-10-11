@@ -4,6 +4,7 @@ const app = getApp()
 
 Page({
   data: {
+    active: 0,
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,

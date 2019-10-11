@@ -1,5 +1,0 @@
-    <van-tabbar active="{{ active }}" bind:change="onChange">
-      <van-tabbar-item icon="flower-o">生活指南</van-tabbar-item>
-      <van-tabbar-item icon="notes-o">学科信息</van-tabbar-item>
-      <van-tabbar-item icon="apps-o">学习指南</van-tabbar-item>
-    </van-tabbar>
