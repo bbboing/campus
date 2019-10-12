@@ -12,11 +12,15 @@ Component({
         icon: 'notes-o',
         text: '学科信息',
       },
+      {
+        url:'/pages/study-guide/index',
+        icon:'apps-o',
+        text:'学习指南'
+      }
     ]
   },
   methods: {
     onChange(event) {
-      console.log(event.detail)
       this.setData({ active: event.detail });
       wx.switchTab({
         url: this.data.list[event.detail].url
