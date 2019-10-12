@@ -1,9 +1,9 @@
-//index.js
-//获取应用实例
 const app = getApp()
 
 Page({
   data: {
-    active: 1,
   },
+  onShow() {
+		this.getTabBar().init();
+  }
 })

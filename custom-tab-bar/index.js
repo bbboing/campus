@@ -3,12 +3,12 @@ Component({
     active: 0,
     list: [
       {
-        url: '../../pages/index/index',
+        url: '/pages/index/index',
         icon: 'flower-o',
         text: '生活指南',
       },
       {
-        url: '../../pages/subjects-information/index',
+        url: '/pages/subjects-information/index',
         icon: 'notes-o',
         text: '学科信息',
       },
@@ -22,9 +22,11 @@ Component({
         url: this.data.list[event.detail].url
       });
     },
-    init() {
+
+		init() {
+			const page = getCurrentPages().pop();
 			this.setData({
-				active: 0
+				active: this.data.list.findIndex(item => item.url === `/${page.route}`)
 			});
 		}
   }
