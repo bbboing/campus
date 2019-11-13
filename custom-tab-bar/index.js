@@ -13,9 +13,9 @@ Component({
         text: '学科信息',
       },
       {
-        url:'/pages/study-guide/index',
-        icon:'apps-o',
-        text:'学习指南'
+        url: '/pages/study-guide/index',
+        icon: 'apps-o',
+        text: '学习指南'
       }
     ]
   },

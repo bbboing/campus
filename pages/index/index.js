@@ -1,9 +1,11 @@
 //index.js
 //获取应用实例
+import { featureList } from '../../static/featureList'
 const app = getApp()
 
 Page({
   data: {
+    list: [],
     active: 0,
     motto: 'Hello World',
     userInfo: {},
@@ -43,6 +45,16 @@ Page({
         }
       })
     }
+    const { life: list } = featureList;
+    this.setData({ list })
+    wx.getLocation({
+      success: res => {
+        this.setData({
+          latitude: res.latitude,
+          longitude: res.longitude,
+        })
+      }
+    })
   },
   onShow() {
 		this.getTabBar().init();
@@ -53,5 +65,16 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  onClick(e){
+    const { target: { offsetTop: offset = null} = {} } = e
+    wx.openLocation({
+      latitude: this.data.latitude,
+      longitude: this.data.longitude,
+    })
+    // console.log(latitude,longitude)
+    // if(offset%74==0){
+    //   wx.createMapContext();
+    // }
   }
 })

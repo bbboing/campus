@@ -7,4 +7,13 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}
+.feature-button{
+  top: 26%;
+  margin-bottom: 30px;
+  width: 75%;
+}
+.feature-container{
+  text-align: center;
+  height: 100vh;
+}
