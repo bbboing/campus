@@ -1,0 +1,10 @@
+<view class="feature-container">
+    <van-button
+        round
+        type="info"
+        custom-class="feature-button"
+        wx:for="{{list}}"
+        id="{{index}}">
+            {{item.title}}
+    </van-button>
+</view>

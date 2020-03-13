@@ -1,0 +1,26 @@
+<!--pages/info/index.wxml-->
+<view class='feature-container'>
+<view class="info">
+  <van-image src='{{image}}' width="10rem"
+  height="10rem"
+  round/>
+  <text>{{name}}</text>
+  </view>
+  <view>
+  <van-cell 
+  islink 
+  title="绑定学号" 
+  link-type="navigateTo"
+  url="/pages/addNumber/index"/>
+  <van-cell 
+  islink 
+  title="修改信息" 
+  link-type="navigateTo"
+  url=""/>
+  <van-cell 
+  islink 
+  title="退出登录" 
+  link-type="navigateTo"
+  url=""/>
+</view>
+</view>

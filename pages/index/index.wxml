@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
+<view class="feature-container" >
+    <swiper indicator-dots="true" autoplay="true">
+      <swiper-item><image mode="widthFix" src="../../image/0.jpg"></image></swiper-item>
+      <swiper-item><image mode="widthFix" src="../../image/1.jpg"></image></swiper-item>
+    </swiper>
+    <van-grid>
+    <van-grid-item icon="location-o" 
+    bind:click="getMap"
+    text="地图" />
+    <van-grid-item icon="photo-o" text="文字" />
+    <van-grid-item icon="photo-o" text="文字" />
+    <van-grid-item icon="photo-o" text="文字" />
+    <van-grid-item icon="photo-o" text="文字" />
+    <van-grid-item icon="photo-o" text="文字" />
+    <van-grid-item icon="photo-o" text="文字" />
+    <van-grid-item icon="photo-o" text="文字" />
+  </van-grid>
+</view>
