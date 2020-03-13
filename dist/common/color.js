@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RED = '#ee0a24';
@@ -7,3 +8,12 @@ exports.GREEN = '#07c160';
 exports.ORANGE = '#ff976a';
 exports.GRAY = '#323233';
 exports.GRAY_DARK = '#969799';
+=======
+export const RED = '#ee0a24';
+export const BLUE = '#1989fa';
+export const WHITE = '#fff';
+export const GREEN = '#07c160';
+export const ORANGE = '#ff976a';
+export const GRAY = '#323233';
+export const GRAY_DARK = '#969799';
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2

@@ -5,10 +5,13 @@
   style="{{ color && !plain ? 'background-color: ' + color + ';' : '' }}{{ textColor || (color && plain) ? 'color: ' + (textColor || color) : '' }}"
 >
   <slot />
+<<<<<<< HEAD
   <van-icon
     wx:if="{{ closeable }}"
     name="cross"
     custom-class="van-tag__close"
     bind:click="onClose"
   />
+=======
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
 </view>

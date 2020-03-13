@@ -22,12 +22,19 @@
   bindgetphonenumber="bindGetPhoneNumber"
   bindlaunchapp="bindLaunchApp"
 >
+<<<<<<< HEAD
   <view class="van-goods-action-icon__content">
+=======
+  <view class="van-goods-action-icon__content van-hairline--right">
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
     <van-icon
       wx:if="{{ icon }}"
       size="20px"
       name="{{ icon }}"
+<<<<<<< HEAD
       dot="{{ dot }}"
+=======
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
       info="{{ info }}"
       class="van-goods-action-icon__icon"
       custom-class="icon-class"

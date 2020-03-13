@@ -33,9 +33,12 @@ App({
       }
     })
   },
+<<<<<<< HEAD
   getMyInfo: function (e) {
     console.log(e.detail.userInfo)
   },
+=======
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
   globalData: {
     userInfo: null
   }

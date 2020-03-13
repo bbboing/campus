@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var component_1 = require("../common/component");
 var color_1 = require("../common/color");
 component_1.VantComponent({
+=======
+import { VantComponent } from '../common/component';
+import { WHITE } from '../common/color';
+import { safeArea } from '../mixins/safe-area';
+VantComponent({
+    mixins: [safeArea()],
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
     props: {
         message: String,
         background: String,
@@ -12,7 +20,11 @@ component_1.VantComponent({
         },
         color: {
             type: String,
+<<<<<<< HEAD
             value: color_1.WHITE
+=======
+            value: WHITE
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
         },
         duration: {
             type: Number,
@@ -21,6 +33,7 @@ component_1.VantComponent({
         zIndex: {
             type: Number,
             value: 110
+<<<<<<< HEAD
         },
         safeAreaInsetTop: {
             type: Boolean,
@@ -55,6 +68,32 @@ component_1.VantComponent({
         },
         onTap: function (event) {
             var onClick = this.data.onClick;
+=======
+        }
+    },
+    methods: {
+        show() {
+            const { duration, onOpened } = this.data;
+            clearTimeout(this.timer);
+            this.setData({
+                show: true
+            }, onOpened);
+            if (duration > 0 && duration !== Infinity) {
+                this.timer = setTimeout(() => {
+                    this.hide();
+                }, duration);
+            }
+        },
+        hide() {
+            const { onClose } = this.data;
+            clearTimeout(this.timer);
+            this.setData({
+                show: false
+            }, onClose);
+        },
+        onTap(event) {
+            const { onClick } = this.data;
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
             if (onClick) {
                 onClick(event.detail);
             }

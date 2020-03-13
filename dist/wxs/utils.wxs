@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* eslint-disable */
 var bem = require('./bem.wxs').bem;
 var memoize = require('./memoize.wxs').memoize;
@@ -7,4 +8,12 @@ module.exports = {
   bem: memoize(bem),
   memoize: memoize,
   addUnit: addUnit
+=======
+var bem = require('./bem.wxs').bem;
+var memoize = require('./memoize.wxs').memoize;
+
+module.exports = {
+  bem: memoize(bem),
+  memoize: memoize
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
 };

@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 <wxs src="../wxs/utils.wxs" module="utils" />
 
 <view class="van-circle">
   <canvas class="van-circle__canvas" style="width: {{ utils.addUnit(size) }};height:{{ utils.addUnit(size) }}" canvas-id="van-circle"></canvas>
+=======
+<view class="van-circle">
+  <canvas class="van-circle__canvas" style="{{ style }}" canvas-id="van-circle"></canvas>
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
   <view wx:if="{{ !text }}" class="van-circle__text">
     <slot></slot>
   </view>

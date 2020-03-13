@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
@@ -25,6 +26,22 @@ var Dialog = function (options) {
         delete options.selector;
         if (dialog) {
             dialog.setData(__assign({ onCancel: reject, onConfirm: resolve }, options));
+=======
+let queue = [];
+function getContext() {
+    const pages = getCurrentPages();
+    return pages[pages.length - 1];
+}
+const Dialog = options => {
+    options = Object.assign(Object.assign({}, Dialog.currentOptions), options);
+    return new Promise((resolve, reject) => {
+        const context = options.context || getContext();
+        const dialog = context.selectComponent(options.selector);
+        delete options.context;
+        delete options.selector;
+        if (dialog) {
+            dialog.setData(Object.assign({ onCancel: reject, onConfirm: resolve }, options));
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
             queue.push(dialog);
         }
         else {
@@ -35,6 +52,7 @@ var Dialog = function (options) {
 Dialog.defaultOptions = {
     show: true,
     title: '',
+<<<<<<< HEAD
     width: null,
     message: '',
     zIndex: 100,
@@ -46,6 +64,17 @@ Dialog.defaultOptions = {
     customStyle: '',
     messageAlign: '',
     overlayStyle: '',
+=======
+    message: '',
+    zIndex: 100,
+    overlay: true,
+    className: '',
+    customStyle: '',
+    asyncClose: false,
+    messageAlign: '',
+    transition: 'scale',
+    selector: '#van-dialog',
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
     confirmButtonText: '确认',
     cancelButtonText: '取消',
     showConfirmButton: true,
@@ -54,15 +83,22 @@ Dialog.defaultOptions = {
     confirmButtonOpenType: ''
 };
 Dialog.alert = Dialog;
+<<<<<<< HEAD
 Dialog.confirm = function (options) {
     return Dialog(__assign({ showCancelButton: true }, options));
 };
 Dialog.close = function () {
     queue.forEach(function (dialog) {
+=======
+Dialog.confirm = options => Dialog(Object.assign({ showCancelButton: true }, options));
+Dialog.close = () => {
+    queue.forEach(dialog => {
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
         dialog.close();
     });
     queue = [];
 };
+<<<<<<< HEAD
 Dialog.stopLoading = function () {
     queue.forEach(function (dialog) {
         dialog.stopLoading();
@@ -76,3 +112,18 @@ Dialog.resetDefaultOptions = function () {
 };
 Dialog.resetDefaultOptions();
 exports.default = Dialog;
+=======
+Dialog.stopLoading = () => {
+    queue.forEach(dialog => {
+        dialog.stopLoading();
+    });
+};
+Dialog.setDefaultOptions = options => {
+    Object.assign(Dialog.currentOptions, options);
+};
+Dialog.resetDefaultOptions = () => {
+    Dialog.currentOptions = Object.assign({}, Dialog.defaultOptions);
+};
+Dialog.resetDefaultOptions();
+export default Dialog;
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2

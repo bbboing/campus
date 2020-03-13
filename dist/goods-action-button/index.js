@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var component_1 = require("../common/component");
@@ -11,17 +12,29 @@ component_1.VantComponent({
         name: 'goods-action',
         current: 'goods-action-button',
     },
+=======
+import { VantComponent } from '../common/component';
+import { link } from '../mixins/link';
+import { button } from '../mixins/button';
+import { openType } from '../mixins/open-type';
+VantComponent({
+    mixins: [link, button, openType],
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
     props: {
         text: String,
         color: String,
         loading: Boolean,
         disabled: Boolean,
+<<<<<<< HEAD
         plain: Boolean,
+=======
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
         type: {
             type: String,
             value: 'danger'
         }
     },
+<<<<<<< HEAD
     mounted: function () {
         this.updateStyle();
     },
@@ -38,6 +51,12 @@ component_1.VantComponent({
                 isFirst: index === 0,
                 isLast: index === length - 1
             });
+=======
+    methods: {
+        onClick(event) {
+            this.$emit('click', event.detail);
+            this.jumpLink();
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
         }
     }
 });

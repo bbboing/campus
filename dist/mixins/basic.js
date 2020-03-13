@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.basic = Behavior({
@@ -19,6 +20,18 @@ exports.basic = Behavior({
                 wx.createSelectorQuery()
                     .in(_this)[all ? 'selectAll' : 'select'](selector)
                     .boundingClientRect(function (rect) {
+=======
+export const basic = Behavior({
+    methods: {
+        $emit(...args) {
+            this.triggerEvent(...args);
+        },
+        getRect(selector, all) {
+            return new Promise(resolve => {
+                wx.createSelectorQuery()
+                    .in(this)[all ? 'selectAll' : 'select'](selector)
+                    .boundingClientRect(rect => {
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
                     if (all && Array.isArray(rect) && rect.length) {
                         resolve(rect);
                     }

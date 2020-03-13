@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var component_1 = require("../common/component");
 var utils_1 = require("../common/utils");
 component_1.VantComponent({
+=======
+import { VantComponent } from '../common/component';
+import { getSystemInfoSync } from '../common/utils';
+VantComponent({
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
     field: true,
     classes: ['input-class', 'right-icon-class'],
     props: {
@@ -29,7 +35,10 @@ component_1.VantComponent({
         customStyle: String,
         confirmType: String,
         confirmHold: Boolean,
+<<<<<<< HEAD
         holdKeyboard: Boolean,
+=======
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
         errorMessage: String,
         arrowDirection: String,
         placeholderStyle: String,
@@ -73,6 +82,7 @@ component_1.VantComponent({
     },
     data: {
         focused: false,
+<<<<<<< HEAD
         system: utils_1.getSystemInfoSync().system.split(' ').shift().toLowerCase()
     },
     methods: {
@@ -111,5 +121,40 @@ component_1.VantComponent({
             this.$emit('change', value);
         },
         noop: function () { }
+=======
+        system: getSystemInfoSync().system.split(' ').shift().toLowerCase()
+    },
+    methods: {
+        onInput(event) {
+            const { value = '' } = event.detail || {};
+            this.setData({ value }, () => {
+                this.emitChange(value);
+            });
+        },
+        onFocus(event) {
+            this.setData({ focused: true });
+            this.$emit('focus', event.detail);
+        },
+        onBlur(event) {
+            this.setData({ focused: false });
+            this.$emit('blur', event.detail);
+        },
+        onClickIcon() {
+            this.$emit('click-icon');
+        },
+        onClear() {
+            this.setData({ value: '' }, () => {
+                this.emitChange('');
+                this.$emit('clear', '');
+            });
+        },
+        onConfirm() {
+            this.$emit('confirm', this.data.value);
+        },
+        emitChange(value) {
+            this.$emit('input', value);
+            this.$emit('change', value);
+        }
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
     }
 });

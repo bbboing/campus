@@ -6,14 +6,23 @@
 >
   <view
     class="van-rate__item"
+<<<<<<< HEAD
     wx:for="{{ innerCountArray }}"
     wx:key="index"
     style="padding-right: {{ index !== count - 1 ? utils.addUnit(gutter) : '' }}"
+=======
+    wx:for="{{ count }}"
+    wx:key="index"
+    style="font-size: {{ sizeWithUnit }};padding-right: {{ index !== count - 1 ? gutterWithUnit : '' }}"
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
   >
     <van-icon
       name="{{ index + 1 <= innerValue ? icon : voidIcon }}"
       class="van-rate__icon"
+<<<<<<< HEAD
       style="font-size: {{ utils.addUnit(size) }}"
+=======
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
       custom-class="icon-class"
       data-score="{{ index }}"
       color="{{ disabled ? disabledColor : index + 1 <= innerValue ? color : voidColor }}"
@@ -24,7 +33,10 @@
       wx:if="{{ allowHalf }}"
       name="{{ index + 0.5 <= innerValue ? icon : voidIcon }}"
       class="{{ utils.bem('rate__icon', ['half']) }}"
+<<<<<<< HEAD
       style="font-size: {{ utils.addUnit(size) }}"
+=======
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
       custom-class="icon-class"
       data-score="{{ index - 0.5 }}"
       color="{{ disabled ? disabledColor : index + 0.5 <= innerValue ? color : voidColor }}"

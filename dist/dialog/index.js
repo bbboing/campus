@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var component_1 = require("../common/component");
@@ -13,6 +14,16 @@ component_1.VantComponent({
                 !show && this.stopLoading();
             }
         },
+=======
+import { VantComponent } from '../common/component';
+import { button } from '../mixins/button';
+import { openType } from '../mixins/open-type';
+import { GRAY, BLUE } from '../common/color';
+VantComponent({
+    mixins: [button, openType],
+    props: {
+        show: Boolean,
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
         title: String,
         message: String,
         useSlot: Boolean,
@@ -20,12 +31,18 @@ component_1.VantComponent({
         customStyle: String,
         asyncClose: Boolean,
         messageAlign: String,
+<<<<<<< HEAD
         overlayStyle: String,
+=======
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
         useTitleSlot: Boolean,
         showCancelButton: Boolean,
         closeOnClickOverlay: Boolean,
         confirmButtonOpenType: String,
+<<<<<<< HEAD
         width: null,
+=======
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
         zIndex: {
             type: Number,
             value: 2000
@@ -40,11 +57,19 @@ component_1.VantComponent({
         },
         confirmButtonColor: {
             type: String,
+<<<<<<< HEAD
             value: color_1.BLUE
         },
         cancelButtonColor: {
             type: String,
             value: color_1.GRAY
+=======
+            value: BLUE
+        },
+        cancelButtonColor: {
+            type: String,
+            value: GRAY
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
         },
         showConfirmButton: {
             type: Boolean,
@@ -65,6 +90,7 @@ component_1.VantComponent({
             cancel: false
         }
     },
+<<<<<<< HEAD
     methods: {
         onConfirm: function () {
             this.handleAction('confirm');
@@ -85,11 +111,41 @@ component_1.VantComponent({
             this.onClose(action);
         },
         close: function () {
+=======
+    watch: {
+        show(show) {
+            !show && this.stopLoading();
+        }
+    },
+    methods: {
+        onConfirm() {
+            this.handleAction('confirm');
+        },
+        onCancel() {
+            this.handleAction('cancel');
+        },
+        onClickOverlay() {
+            this.onClose('overlay');
+        },
+        handleAction(action) {
+            if (this.data.asyncClose) {
+                this.setData({
+                    [`loading.${action}`]: true
+                });
+            }
+            this.onClose(action);
+        },
+        close() {
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
             this.setData({
                 show: false
             });
         },
+<<<<<<< HEAD
         stopLoading: function () {
+=======
+        stopLoading() {
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
             this.setData({
                 loading: {
                     confirm: false,
@@ -97,14 +153,22 @@ component_1.VantComponent({
                 }
             });
         },
+<<<<<<< HEAD
         onClose: function (action) {
+=======
+        onClose(action) {
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
             if (!this.data.asyncClose) {
                 this.close();
             }
             this.$emit('close', action);
             // 把 dialog 实例传递出去，可以通过 stopLoading() 在外部关闭按钮的 loading
             this.$emit(action, { dialog: this });
+<<<<<<< HEAD
             var callback = this.data[action === 'confirm' ? 'onConfirm' : 'onCancel'];
+=======
+            const callback = this.data[action === 'confirm' ? 'onConfirm' : 'onCancel'];
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
             if (callback) {
                 callback(this);
             }

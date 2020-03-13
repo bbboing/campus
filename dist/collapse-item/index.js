@@ -1,13 +1,25 @@
+<<<<<<< HEAD
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var component_1 = require("../common/component");
 var nextTick = function () { return new Promise(function (resolve) { return setTimeout(resolve, 20); }); };
 component_1.VantComponent({
+=======
+import { VantComponent } from '../common/component';
+const nextTick = () => new Promise(resolve => setTimeout(resolve, 20));
+VantComponent({
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
     classes: ['title-class', 'content-class'],
     relation: {
         name: 'collapse',
         type: 'ancestor',
+<<<<<<< HEAD
         current: 'collapse-item',
+=======
+        linked(parent) {
+            this.parent = parent;
+        }
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
     },
     props: {
         name: null,
@@ -31,6 +43,7 @@ component_1.VantComponent({
         expanded: false,
         transition: false
     },
+<<<<<<< HEAD
     mounted: function () {
         var _this = this;
         this.updateExpanded()
@@ -88,6 +101,63 @@ component_1.VantComponent({
             this.parent.switch(currentName, !expanded);
         },
         onTransitionEnd: function () {
+=======
+    mounted() {
+        this.updateExpanded()
+            .then(nextTick)
+            .then(() => {
+            const data = { transition: true };
+            if (this.data.expanded) {
+                data.contentHeight = 'auto';
+            }
+            this.setData(data);
+        });
+    },
+    methods: {
+        updateExpanded() {
+            if (!this.parent) {
+                return Promise.resolve();
+            }
+            const { value, accordion } = this.parent.data;
+            const { children = [] } = this.parent;
+            const { name } = this.data;
+            const index = children.indexOf(this);
+            const currentName = name == null ? index : name;
+            const expanded = accordion
+                ? value === currentName
+                : (value || []).some((name) => name === currentName);
+            const stack = [];
+            if (expanded !== this.data.expanded) {
+                stack.push(this.updateStyle(expanded));
+            }
+            stack.push(this.set({ index, expanded }));
+            return Promise.all(stack);
+        },
+        updateStyle(expanded) {
+            return this.getRect('.van-collapse-item__content')
+                .then((rect) => rect.height)
+                .then((height) => {
+                if (expanded) {
+                    return this.set({
+                        contentHeight: height ? `${height}px` : 'auto'
+                    });
+                }
+                return this.set({ contentHeight: `${height}px` })
+                    .then(nextTick)
+                    .then(() => this.set({ contentHeight: 0 }));
+            });
+        },
+        onClick() {
+            if (this.data.disabled) {
+                return;
+            }
+            const { name, expanded } = this.data;
+            const index = this.parent.children.indexOf(this);
+            const currentName = name == null ? index : name;
+            this.parent.switch(currentName, !expanded);
+        },
+        onTransitionEnd() {
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
             if (this.data.expanded) {
                 this.setData({
                     contentHeight: 'auto'

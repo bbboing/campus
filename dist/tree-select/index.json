@@ -1,8 +1,12 @@
 {
   "component": true,
   "usingComponents": {
+<<<<<<< HEAD
     "van-icon": "../icon/index",
     "van-sidebar": "../sidebar/index",
     "van-sidebar-item": "../sidebar-item/index"
+=======
+    "van-icon": "../icon/index"
+>>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
   }
 }
