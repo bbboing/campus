@@ -16,40 +16,24 @@
     <slot name="tip" />
   </view>
 
-<<<<<<< HEAD
-  <view class="bar-class {{ utils.bem('submit-bar__bar', { safe: safeAreaInsetBottom }) }}">
-=======
   <view class="bar-class {{ utils.bem('submit-bar__bar', { safe: safeAreaInsetBottom && isIPhoneX }) }}">
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
     <slot />
     <view wx:if="{{ hasPrice }}" class="van-submit-bar__text">
       <text>{{ label || '合计：' }}</text>
       <text class="van-submit-bar__price price-class">
         <text class="van-submit-bar__currency">{{ currency }} </text>
-<<<<<<< HEAD
-        <text class="van-submit-bar__price-integer">{{ integerStr }}</text><text>{{decimalStr}}</text>
-=======
         <text>{{ priceStr }}</text>
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
       </text>
       <text class="van-submit-bar__suffix-label">{{ suffixLabel }}</text>
     </view>
     <van-button
-<<<<<<< HEAD
-      round
-=======
       square
       size="large"
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
       type="{{ buttonType }}"
       loading="{{ loading }}"
       disabled="{{ disabled }}"
       class="van-submit-bar__button"
       custom-class="button-class"
-<<<<<<< HEAD
-      custom-style="width: 100%;"
-=======
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
       bind:click="onSubmit"
     >
       {{ loading ? '' : buttonText }}

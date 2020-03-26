@@ -1,10 +1,6 @@
 {
   "usingComponents": {
-<<<<<<< HEAD
     "van-grid": "../../dist/grid/index/",
     "van-grid-item": "../../dist/grid-item/index"
-=======
-    "van-button": "../../dist/button/index"
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
   }
 }

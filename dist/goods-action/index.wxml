@@ -1,9 +1,5 @@
 <wxs src="../wxs/utils.wxs" module="utils" />
 
-<<<<<<< HEAD
-<view class="custom-class {{ utils.bem('goods-action', { safe: safeAreaInsetBottom }) }}">
-=======
 <view class="custom-class {{ utils.bem('goods-action', { safe: isIPhoneX && safeAreaInsetBottom }) }}">
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
   <slot />
 </view>

@@ -1,11 +1,7 @@
 <wxs src="../wxs/utils.wxs" module="utils" />
 
 <view
-<<<<<<< HEAD
-  class="{{ utils.bem('sidebar-item', { selected, disabled }) }} {{ selected ? 'active-class' : '' }} {{ disabled ? 'disabled-class' : '' }} custom-class"
-=======
   class="{{ utils.bem('sidebar-item', { active }) }} van-hairline custom-class"
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
   hover-class="van-sidebar-item--hover"
   hover-stay-time="70"
   bind:tap="onClick"

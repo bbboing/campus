@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var component_1 = require("../common/component");
-var utils_1 = require("../common/utils");
-component_1.VantComponent({
-    relation: {
-        name: 'grid-item',
-        type: 'descendant',
-        current: 'grid',
-=======
 import { VantComponent } from '../common/component';
 VantComponent({
     relation: {
@@ -20,7 +9,6 @@ VantComponent({
         unlinked(child) {
             this.children = this.children.filter((item) => item !== child);
         }
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
     },
     props: {
         square: {
@@ -52,16 +40,6 @@ VantComponent({
             observer: 'updateChildren'
         }
     },
-<<<<<<< HEAD
-    data: {
-        viewStyle: '',
-    },
-    created: function () {
-        var gutter = this.data.gutter;
-        if (gutter) {
-            this.setData({
-                viewStyle: "padding-left: " + utils_1.addUnit(gutter)
-=======
     beforeCreate() {
         this.children = [];
     },
@@ -70,18 +48,12 @@ VantComponent({
         if (gutter) {
             this.setData({
                 style: `padding-left: ${gutter}px`
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
             });
         }
     },
     methods: {
-<<<<<<< HEAD
-        updateChildren: function () {
-            this.children.forEach(function (child) {
-=======
         updateChildren() {
             this.children.forEach((child) => {
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
                 child.updateStyle();
             });
         }

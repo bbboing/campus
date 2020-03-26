@@ -4,16 +4,11 @@
 		"ignore": []
 	},
 	"setting": {
-<<<<<<< HEAD
 		"urlCheck": false,
-=======
-		"urlCheck": true,
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-<<<<<<< HEAD
 		"coverView": true,
 		"autoAudits": false,
 		"showShadowRootInWxmlPanel": true,
@@ -28,11 +23,6 @@
 		}
 	},
 	"cloudfunctionRoot": "functions/",
-=======
-		"autoAudits": false,
-		"coverView": true
-	},
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
 	"compileType": "miniprogram",
 	"libVersion": "2.8.3",
 	"appid": "wx6f467db86583e54d",
@@ -43,10 +33,7 @@
 	"isGameTourist": false,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
-<<<<<<< HEAD
 	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
-=======
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
 	"condition": {
 		"search": {
 			"current": -1,

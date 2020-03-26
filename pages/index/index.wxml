@@ -11,7 +11,6 @@
     <text class="user-motto">{{motto}}</text>
   </view>
 </view> -->
-<<<<<<< HEAD
 <view class="feature-container" >
     <swiper indicator-dots="true" autoplay="true">
       <swiper-item><image mode="widthFix" src="../../image/0.jpg"></image></swiper-item>
@@ -29,15 +28,4 @@
     <van-grid-item icon="photo-o" text="文字" />
     <van-grid-item icon="photo-o" text="文字" />
   </van-grid>
-=======
-<view class="feature-container" bindtap="onClick">
-    <van-button
-        round
-        type="info"
-        custom-class="feature-button"
-        wx:for="{{list}}"
-        id="{{index}}">
-            {{item.title}}
-    </van-button>
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
 </view>

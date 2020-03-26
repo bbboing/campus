@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-@import '../common/index.wxss';.van-sticky{position:relative}.van-sticky-wrap--fixed{position:fixed;right:0;left:0}
-=======
 @import '../common/index.wxss';.van-sticky{position:relative}
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2

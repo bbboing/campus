@@ -5,11 +5,7 @@ const app = getApp()
 
 Page({
   data: {
-<<<<<<< HEAD
     list: [{},],
-=======
-    list: [],
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
     active: 0,
     motto: 'Hello World',
     userInfo: {},
@@ -22,7 +18,6 @@ Page({
       url: '../logs/logs'
     })
   },
-<<<<<<< HEAD
   getMap:function(){
     let plugin = requirePlugin('routePlan');
     let key = '2X2BZ-2IKKS-2GTOG-6RUJ3-6EWLT-ESF43';  //使用在腾讯位置服务申请的key
@@ -36,8 +31,6 @@ Page({
       url: 'plugin://routePlan/index?key=' + key + '&referer=' + referer + '&endPoint=' + endPoint
     });
   },
-=======
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

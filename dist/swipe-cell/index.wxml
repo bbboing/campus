@@ -5,13 +5,8 @@
   bindtouchstart="startDrag"
   catchtouchmove="{{ catchMove ? 'noop' : '' }}"
   capture-bind:touchmove="onDrag"
-<<<<<<< HEAD
-  bindtouchend="endDrag"
-  bindtouchcancel="endDrag"
-=======
   catchtouchend="endDrag"
   catchtouchcancel="endDrag"
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
 >
   <view style="{{ wrapperStyle }}">
     <view wx:if="{{ leftWidth }}" class="van-swipe-cell__left" data-key="left" catch:tap="onClick">

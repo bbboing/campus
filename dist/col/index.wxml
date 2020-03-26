@@ -2,11 +2,7 @@
 
 <view
   class="custom-class {{ utils.bem('col', [span]) }} {{ offset ? 'van-col--offset-' + offset : '' }}"
-<<<<<<< HEAD
-  style="{{ viewStyle }}"
-=======
   style="{{ style }}"
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
 >
   <slot />
 </view>

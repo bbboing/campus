@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var component_1 = require("../common/component");
-var utils_1 = require("../common/utils");
-component_1.VantComponent({
-=======
 import { VantComponent } from '../common/component';
 import { getSystemInfoSync } from '../common/utils';
 VantComponent({
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
     field: true,
     classes: ['input-class', 'right-icon-class'],
     props: {
@@ -35,10 +27,6 @@ VantComponent({
         customStyle: String,
         confirmType: String,
         confirmHold: Boolean,
-<<<<<<< HEAD
-        holdKeyboard: Boolean,
-=======
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
         errorMessage: String,
         arrowDirection: String,
         placeholderStyle: String,
@@ -82,46 +70,6 @@ VantComponent({
     },
     data: {
         focused: false,
-<<<<<<< HEAD
-        system: utils_1.getSystemInfoSync().system.split(' ').shift().toLowerCase()
-    },
-    methods: {
-        onInput: function (event) {
-            var _this = this;
-            var _a = (event.detail || {}).value, value = _a === void 0 ? '' : _a;
-            this.setData({ value: value });
-            wx.nextTick(function () {
-                _this.emitChange(value);
-            });
-        },
-        onFocus: function (event) {
-            this.setData({ focused: true });
-            this.$emit('focus', event.detail);
-        },
-        onBlur: function (event) {
-            this.setData({ focused: false });
-            this.$emit('blur', event.detail);
-        },
-        onClickIcon: function () {
-            this.$emit('click-icon');
-        },
-        onClear: function () {
-            var _this = this;
-            this.setData({ value: '' });
-            wx.nextTick(function () {
-                _this.emitChange('');
-                _this.$emit('clear', '');
-            });
-        },
-        onConfirm: function () {
-            this.$emit('confirm', this.data.value);
-        },
-        emitChange: function (value) {
-            this.$emit('input', value);
-            this.$emit('change', value);
-        },
-        noop: function () { }
-=======
         system: getSystemInfoSync().system.split(' ').shift().toLowerCase()
     },
     methods: {
@@ -155,6 +103,5 @@ VantComponent({
             this.$emit('input', value);
             this.$emit('change', value);
         }
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
     }
 });

@@ -3,14 +3,10 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/subjects-information/index",
-<<<<<<< HEAD
     "pages/login/index",
     "pages/info/index",
     "pages/addNumber/index"
     
-=======
-    "pages/study-guide/index"
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -37,7 +33,6 @@
         "pagePath": "pages/subjects-information/index"
       },
       {
-<<<<<<< HEAD
         "pagePath":"pages/info/index"
       }
     ]
@@ -53,11 +48,5 @@
       "desc": "你的位置信息将用于小程序定位"
     }
   },
-=======
-        "pagePath":"pages/study-guide/index"
-      }
-    ]
-  },
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
   "usingComponents": {}
 }

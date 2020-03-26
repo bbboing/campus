@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<wxs src="../wxs/utils.wxs" module="utils" />
-
-<view class="custom-class van-loading {{ vertical ? 'van-loading--vertical' : '' }}">
-  <view
-    class="van-loading__spinner van-loading__spinner--{{ type }}"
-    style="color: {{ color }}; width: {{ utils.addUnit(size) }}; height: {{ utils.addUnit(size) }}"
-  >
-    <view
-      wx:if="{{ type === 'spinner' }}"
-      wx:for="{{ array12 }}"
-=======
 <view
   class="van-loading custom-class"
   style="width: {{ sizeWithUnit }}; height: {{ sizeWithUnit }}"
@@ -21,16 +9,8 @@
     <view
       wx:if="{{ type === 'spinner' }}"
       wx:for="item in 12"
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
       wx:key="index"
       class="van-loading__dot"
     />
   </view>
-<<<<<<< HEAD
-  <view class="van-loading__text" style="font-size: {{ utils.addUnit(textSize) }};">
-    <slot />
-  </view>
 </view>
-=======
-</view>
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2

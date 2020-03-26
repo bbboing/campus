@@ -32,10 +32,6 @@
       cursor-spacing="{{ cursorSpacing }}"
       adjust-position="{{ adjustPosition }}"
       show-confirm-bar="{{ showConfirmBar }}"
-<<<<<<< HEAD
-      hold-keyboard="{{ holdKeyboard }}"
-=======
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
       selection-end="{{ selectionEnd }}"
       selection-start="{{ selectionStart }}"
       bindinput="onInput"
@@ -57,10 +53,6 @@
       placeholder-class="{{ utils.bem('field__placeholder', { error }) }}"
       confirm-type="{{ confirmType }}"
       confirm-hold="{{ confirmHold }}"
-<<<<<<< HEAD
-      hold-keyboard="{{ holdKeyboard }}"
-=======
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
       cursor-spacing="{{ cursorSpacing }}"
       adjust-position="{{ adjustPosition }}"
       selection-end="{{ selectionEnd }}"
@@ -76,11 +68,7 @@
       size="16px"
       name="clear"
       class="van-field__clear-root van-field__icon-root"
-<<<<<<< HEAD
-      catch:touchstart="onClear"
-=======
       bindtouchstart="onClear"
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
     />
     <view class="van-field__icon-container" bind:tap="onClickIcon">
       <van-icon

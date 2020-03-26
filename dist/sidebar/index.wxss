@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-@import '../common/index.wxss';.van-sidebar{width:85px;width:var(--sidebar-width,85px)}
-=======
 @import '../common/index.wxss';.van-sidebar{width:85px}
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2

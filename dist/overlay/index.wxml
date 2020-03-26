@@ -5,10 +5,4 @@
   duration="{{ duration }}"
   bind:tap="onClick"
   catch:touchmove="noop"
-<<<<<<< HEAD
->
-  <slot></slot>
-</van-transition>
-=======
 />
->>>>>>> 336dbefd48c7371c730c2bc3d82d4e4e1ee6a9b2
